@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BMI Calculator</title>
+</head>
+<body>
+   <h1>BMI Calculator</h1>
+   <form method="POST">
+    <label for="height">Input Height in Inches</label>
+    <br>
+    <input type="number" name="height" step="0.01"
+           placeholder="type in height"
+           value="{{ request.form['height'] }}"></input>
+    <br>
+    <label for="weight">Input Weight in Pounds</label>
+    <br>
+    <input type="number" name="weight" step="0.01"
+           placeholder="type in weight"
+           value="{{ request.form['weight'] }}"></input>
+    <br>
+    <button type="submit">Submit</button>
+    <h1>Your BMI is: {{bmi}}</h1>
+    <h1>Category: {{category}} </h1>
+</form>
+</body>
+</html>
